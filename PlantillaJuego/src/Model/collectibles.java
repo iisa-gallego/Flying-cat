@@ -7,66 +7,66 @@ public class collectibles implements Runnable{
 
 	private PApplet app;
 
-	private PImage star;
+	private PImage yarn;
 
-	private int posXStar;
-	private int posYStar;
+	private int posXYarn;
+	private int posYYarn;
 	private int moveX;
-	private boolean moveXStar;
+	private boolean moveXYarn;
 
-	public collectibles(PApplet app , int posXStar, int posYStar) {
+	public collectibles(PApplet app , int posXYarn, int posYYarn) {
 
 		this.app=app;
 
-		this.posXStar=posXStar;
-		this.posYStar=posYStar;
+		this.posXYarn=posXYarn;
+		this.posYYarn=posYYarn;
 		
-		moveXStar= false;
+		moveXYarn= false;
 
-		star=app.loadImage("../Resources/STAR.png");
+		yarn=app.loadImage("../data/yarn.png");
 	} //CONSTRUCTOR
 
 	public void draw () {
 
-		app.image(star, posXStar, posYStar);	
+		app.image(yarn, posXYarn, posYYarn);	
 
 	}
 	
-	public void moveStar() {
-		if (moveXStar == true) {
-			posXStar = posXStar - 15;
+	public void moveYarn() {
+		if (moveXYarn == true) {
+			posXYarn = posXYarn - 15;
 		}	
 	}
 	
 	
 
-	public int getposXStar () {
-		return posXStar;
+	public int getposXYarn () {
+		return posXYarn;
 	}
-	public void setPosXStar () {
-		this.posXStar = posXStar;
+	public void setPosXYarn () {
+		this.posXYarn = posXYarn;
 	}
-	public int getposYStar () {
-		return posYStar;
+	public int getposYYarn () {
+		return posYYarn;
 	}
 	
-	public void setPosYStar () {
-		this.posYStar = posYStar;
+	public void setPosYYarn () {
+		this.posYYarn = posYYarn;
 	}
 
 	public boolean isMoveXStar() {
-		return moveXStar;
+		return moveXYarn;
 	}
 
-	public void setMoveXStar(boolean moveXStar) {
-		this.moveXStar = moveXStar;
+	public void setMoveXYarn(boolean moveXYarn) {
+		this.moveXYarn = moveXYarn;
 	}
 
 	@Override
 	public void run() {
-		moveStar();
+		moveYarn();
 	}
 	
 	
 
-} // STAR
+} 
