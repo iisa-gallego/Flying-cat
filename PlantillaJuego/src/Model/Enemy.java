@@ -131,9 +131,8 @@ public class Enemy implements Runnable, Drawable {
 		this.moveXEnemy = moveXEnemy;
 	}
 
-	@Override
 	public void run() {
-		// TODO Auto-generated method stub
+	
 		moveEnemy();
 	}
 
