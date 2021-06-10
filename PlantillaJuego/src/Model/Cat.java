@@ -5,7 +5,7 @@ import processing.core.PImage;
 import processing.core.PVector;
 
 
-public class Cat extends Thread implements drawable{
+public class Cat extends Thread implements Drawable{
 
 	private PApplet app;
 	private PImage revy;

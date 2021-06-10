@@ -3,7 +3,7 @@ package Model;
 import processing.core.PApplet;
 import processing.core.PImage;
 
-public class enemy implements Runnable, drawable {
+public class Enemy implements Runnable, Drawable {
 
 	private PApplet app;
 
@@ -19,7 +19,7 @@ public class enemy implements Runnable, drawable {
 	private boolean moveXEnemy;
 
 
-	public enemy (PApplet app , int posXEnemy, int posYEnemy, int dir) {
+	public Enemy (PApplet app , int posXEnemy, int posYEnemy, int dir) {
 
 		this.app=app;
 		this.posXEnemy=posXEnemy;

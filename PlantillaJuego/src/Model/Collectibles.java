@@ -3,7 +3,7 @@ package Model;
 import processing.core.PApplet;
 import processing.core.PImage;
 
-public class collectibles implements Runnable{
+public class Collectibles implements Runnable{
 
 	private PApplet app;
 
@@ -14,7 +14,7 @@ public class collectibles implements Runnable{
 	private int moveX;
 	private boolean moveXYarn;
 
-	public collectibles(PApplet app , int posXYarn, int posYYarn) {
+	public Collectibles(PApplet app , int posXYarn, int posYYarn) {
 
 		this.app=app;
 

@@ -1,5 +1,5 @@
 package Model;
 
-public interface drawable {
+public interface Drawable {
 	public void drawChar();
 }

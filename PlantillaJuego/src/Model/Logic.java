@@ -5,16 +5,16 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.LinkedList;
 
-import exception.Lose;
+//import exception.Lose;
 import processing.core.PApplet;
 
 public class Logic {
 
 	private PApplet app;
 	private boolean move;
-	private ByName byname;
-	private ByTime bytime;
-	private ByDate bydate;
+	private byName byname;
+	private byTime bytime;
+	private byDate bydate;
 
 	private int min,seg;
 	private boolean time;
@@ -22,12 +22,12 @@ public class Logic {
 
 	private String temporalName;
 	private int posXEnemy;
-	private LinkedList<Player> player;
+	private LinkedList<player> player;
 	private ArrayList<Enemy> enemy;
 
-	private ArrayList <Star> star;
+	private ArrayList <Collectibles> collectibles;
 
-	private Revy revy;
+	private Cat cat;
 
 	private int score;
 
@@ -37,10 +37,10 @@ public class Logic {
 	private Logic(PApplet app) {
 
 		this.app=app;
-		revy = new Revy(50, 457, app);
-		byname= new ByName();
-		bytime= new ByTime();
-		bydate= new ByDate();
+		cat = new Cat(50, 457, app);
+		byname= new byName();
+		bytime= new byTime();
+		bydate= new byDate();
 		temporalName="";
 		score=0;
 		loseTouch=false;
@@ -49,13 +49,13 @@ public class Logic {
 		seg=0;
 		time=false;
 
-		player = new LinkedList<Player>();
+		player = new LinkedList<player>();
 		enemy = new ArrayList<Enemy>();
-		star = new ArrayList <Star> ();
+		collectibles = new ArrayList <Collectibles> ();
 
 		try {
 			createEnemy();
-			createStar ();
+			createCollectibles ();
 		} catch (RuntimeException e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -79,15 +79,15 @@ public class Logic {
 	}
 
 	public void drawGame() {
-		revy.drawChar();
+		cat.drawChar();
 		if (move == true) {
-			Thread revyMove = new Thread(revy);
+			Thread revyMove = new Thread(cat);
 			revyMove.start();
 		}
 
-		for (int i = 0; i < star.size(); i++) {
-			star.get(i).setMoveXStar(enemy.get(0).isMoveXEnemy());
-			Thread starMove = new Thread(star.get(i));
+		for (int i = 0; i < collectibles.size(); i++) {
+			collectibles.get(i).setMoveXYarn(enemy.get(0).isMoveXEnemy());
+			Thread starMove = new Thread(collectibles.get(i));
 			starMove.start();
 		}
 
@@ -98,9 +98,9 @@ public class Logic {
 	}
 
 	public void newPoint() {
-		for (int i = 0; i < star.size(); i++) {
-			if (app.dist(revy.getPosXCollision()+66, revy.getPosY()+70, star.get(i).getposXStar(), star.get(i).getposYStar())<=100) {
-				star.remove(i);
+		for (int i = 0; i < collectibles.size(); i++) {
+			if (app.dist(cat.getPosXCollision()+66, cat.getPosY()+70, collectibles.get(i).getposXYarn(), collectibles.get(i).getposYYarn())<=100) {
+				collectibles.remove(i);
 				score = score + 100;
 			}
 		}
@@ -110,7 +110,7 @@ public class Logic {
 	}
 
 	public void fallRevy(boolean c) {
-		revy.setFall(c);
+		cat.setFall(c);
 	}
 
 	public void drawEnemy() {
@@ -146,32 +146,32 @@ public class Logic {
 		System.out.println(enemy.size());
 	}
 
-	public void createStar () {
+	public void createCollectibles () {
 
-		star.add(new Star (app, 414,490));
+		collectibles.add(new Collectibles (app, 414,490));
 
-		star.add(new Star (app, 683,382));
+		collectibles.add(new Collectibles (app, 683,382));
 
-		star.add(new Star (app, 975,238));
+		collectibles.add(new Collectibles (app, 975,238));
 
-		star.add(new Star (app, 1515,238));
+		collectibles.add(new Collectibles (app, 1515,238));
 
-		star.add(new Star (app, 2068,211));
+		collectibles.add(new Collectibles (app, 2068,211));
 
-		star.add(new Star (app, 2094,493));
+		collectibles.add(new Collectibles (app, 2094,493));
 
-		star.add(new Star (app, 2343,490));
+		collectibles.add(new Collectibles (app, 2343,490));
 
-		star.add(new Star (app, 2833,326));
+		collectibles.add(new Collectibles (app, 2833,326));
 
-		star.add(new Star (app, 3083,326));
+		collectibles.add(new Collectibles (app, 3083,326));
 
 	}
 
-	public void drawStars () {
+	public void drawYarn () {
 
-		for (Star star : star) {
-			star.draw();
+		for (Collectibles collectibles : collectibles) {
+			collectibles.draw();
 		}
 
 	}
@@ -203,7 +203,7 @@ public class Logic {
 		Date date = new Date();
 		for (int i = 0; i < 1; i++) {
 
-			Player newPlayer = new Player(temporalName, date, time, score, app);
+			player newPlayer = new player(temporalName, date, time, score, app);
 			player.add(newPlayer);
 
 			System.out.println("player" + player.size());
@@ -212,9 +212,9 @@ public class Logic {
 
 	public void reset() {
 
-		revy = new Revy(50, 457, app);
+		cat = new Cat(50, 457, app);
 		enemy.clear();
-		star.clear();
+		collectibles.clear();
 		temporalName="";
 		score=0;
 		loseTouch=false;
@@ -223,18 +223,18 @@ public class Logic {
 		seg=0;
 
 		createEnemy();
-		createStar ();
+		createCollectibles ();
 	}
 
 
 	public void collision() {
 		for (int i = 0; i < enemy.size(); i++) {
-			if (app.dist(revy.getPosXCollision()+ 80, revy.getPosY()+ 10, enemy.get(i).getPosXEnemy()+ 80 , enemy.get(i).getPosYEnemy()+ 20) <= 20) {
+			if (app.dist(cat.getPosXCollision()+ 80, cat.getPosY()+ 10, enemy.get(i).getPosXEnemy()+ 80 , enemy.get(i).getPosYEnemy()+ 20) <= 20) {
 				loseTouch = true;
 				loseGame();
-				revy.setPosXCollision(0);
+				cat.setPosXCollision(0);
 			}
-			if (app.dist(revy.getPosXCollision()+ 66, revy.getPosY()+ 140, enemy.get(i).getPosXEnemy()+ 50 , enemy.get(i).getPosYEnemy()) <= 40) {
+			if (app.dist(cat.getPosXCollision()+ 66, cat.getPosY()+ 140, enemy.get(i).getPosXEnemy()+ 50 , enemy.get(i).getPosYEnemy()) <= 40) {
 				enemy.remove(i);
 			}
 
@@ -250,7 +250,7 @@ public class Logic {
 	}
 
 	public void getKey(int c) {
-		revy.setKey(c);
+		cat.setKey(c);
 
 		if (c == 37 || c== 38 || c == 39) {
 			move=true;
@@ -277,23 +277,23 @@ public class Logic {
 	}
 
 	public int getPosX() {
-		return revy.getPosX();
+		return cat.getPosX();
 	}
 
 
 
 
-	public LinkedList<Player> getPlayer() {
+	public LinkedList<player> getPlayer() {
 		return player;
 	}
 
-	public void setPlayer(LinkedList<Player> player) {
+	public void setPlayer(LinkedList<player> player) {
 		this.player = player;
 	}
 
 
 	public int getPosY() {
-		return revy.getPosY();
+		return cat.getPosY();
 	}
 
 
@@ -329,12 +329,12 @@ public class Logic {
 		Collections.sort(player, bytime);	
 	}
 	public void setPosXRevy(int posXCollision) {
-		revy.setPosXCollision(posXCollision);
+		cat.setPosXCollision(posXCollision);
 
 	}
 
 	public int getXCollision() {
-		return revy.getPosXCollision();
+		return cat.getPosXCollision();
 	}
 
 	public void setPosX(int c) {
