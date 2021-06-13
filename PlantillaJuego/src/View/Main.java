@@ -42,8 +42,8 @@ public class Main extends PApplet{
 	
 	public void draw() {
 		
-		System.out.println("X= "+ mouseX);
-		System.out.println("Y= "+ mouseY);
+		//System.out.println("X= "+ mouseX);
+		//System.out.println("Y= "+ mouseY);
 		
 		
 		background(0);

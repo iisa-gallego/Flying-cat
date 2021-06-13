@@ -30,7 +30,7 @@ public class Register {
 		//screen=2;
 		register=app.loadImage("../Resources/Register.png");
 		controller = new ControllerRegister(app);
-		fontText=app.createFont("../Resources/Krungthep.tff", 40);
+		fontText=app.createFont("../Resources/Krungthep.ttf", 40);
 		correct= false;
 		
 		cp5= new ControlP5(app);
