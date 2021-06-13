@@ -30,7 +30,7 @@ public class Register {
 		//screen=2;
 		register=app.loadImage("../Resources/Register.png");
 		controller = new ControllerRegister(app);
-		fontText=app.createFont("../Resources/Krungthep.tff", 62);
+		fontText=app.createFont("../Resources/Krungthep.tff", 40);
 		correct= false;
 		
 		cp5= new ControlP5(app);
@@ -44,7 +44,7 @@ public class Register {
 		
 		inputs[0] = "Name";
 		
-		cp5.addTextfield(inputs[0]).setPosition(256,366).setSize(684,95).setAutoClear(true)
+		cp5.addTextfield(inputs[0]).setPosition(462,295).setSize(400,40).setAutoClear(true)
 		.setColorBackground(app.color(0,0,0,1)).setColorActive(app.color(0,0,0,1))
 		.setColorValueLabel(app.color(0)).setFont(fontText);
 		
@@ -81,7 +81,7 @@ public class Register {
 	public int button() {
 		int screen=2;
 		
-		if(app.mouseX>250 && app.mouseX<570 && app.mouseY>530 && app.mouseY<605) {
+		if(app.mouseX>526 && app.mouseX<661 && app.mouseY>212 && app.mouseY<246) {
 			
 			
 			try {
@@ -102,7 +102,7 @@ public class Register {
 			
 		}
 		
-		if(app.mouseX>630 && app.mouseX<945 && app.mouseY>530 && app.mouseY<605) {
+		if(app.mouseX>513 && app.mouseX<653 && app.mouseY>595 && app.mouseY<628) {
 			screen=1;
 		}
 		

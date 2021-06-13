@@ -156,7 +156,7 @@ public class Gameplay {
 
 		int screen=3;
 
-		if(app.mouseX>771 && app.mouseX<1086 && app.mouseY>652 && app.mouseY<730) {
+		if(app.mouseX>980 && app.mouseX<1117 && app.mouseY>608 && app.mouseY<643) {
 			screen=1;
 			
 			try {

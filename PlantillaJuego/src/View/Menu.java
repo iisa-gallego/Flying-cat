@@ -12,7 +12,7 @@ public class Menu {
 	public Menu(PApplet app) {
 		
 		this.app=app;
-		//screen=1;
+		screen=1;
 		menu=app.loadImage("../Resources/Inicio.png");
 	}
 	
@@ -25,13 +25,13 @@ public class Menu {
 		
 		int screen=1;
 		
-		if(app.mouseX>580 && app.mouseX<1036 && app.mouseY>445 && app.mouseY<518) {
+		if(app.mouseX>510 && app.mouseX<688 && app.mouseY>492 && app.mouseY<515) {
 			screen=2;
 		}
-		if(app.mouseX>580 && app.mouseX<1036 && app.mouseY>562 && app.mouseY<632){
+		if(app.mouseX>510 && app.mouseX<688 && app.mouseY>563 && app.mouseY<571){
 			screen=4;
 		}
-		if(app.mouseX>652 && app.mouseX<966 && app.mouseY>680 && app.mouseY<746){
+		if(app.mouseX>578 && app.mouseX<623 && app.mouseY>584 && app.mouseY<614){
 			app.exit();
 		}
 		

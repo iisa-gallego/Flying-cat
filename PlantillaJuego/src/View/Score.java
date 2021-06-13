@@ -28,7 +28,7 @@ public class Score {
 		
 		int screen=4;
 		
-		if(app.mouseX>435 && app.mouseX<752 && app.mouseY>650 && app.mouseY<722) {
+		if(app.mouseX>957 && app.mouseX<1093 && app.mouseY>615 && app.mouseY<643) {
 			screen=1;
 			
 		}
