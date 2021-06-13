@@ -24,11 +24,11 @@ public class Gameplay {
 	public Gameplay(PApplet app) {
 		this.app=app;
 		controlGame = new Controller(app);
-		game=app.loadImage("../Resources/map1.png");
+		game=app.loadImage("../Resources/Fondo.png");
 		endGame=false;
 
-		win=app.loadImage("../Resources/win.png");
-		lose=app.loadImage("../Resources/lose.png");
+		win=app.loadImage("../Resources/PantallaWin.png");
+		lose=app.loadImage("../Resources/PantallaLose.png");
 		endCase=0;
 		posX=0;
 		moveScreen = false;

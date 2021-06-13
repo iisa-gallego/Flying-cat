@@ -28,7 +28,7 @@ public class Register {
 		
 		this.app=app;
 		//screen=2;
-		register=app.loadImage("../Resources/register.png");
+		register=app.loadImage("../Resources/Register.png");
 		controller = new ControllerRegister(app);
 		fontText=app.createFont("../Resources/Krungthep.tff", 62);
 		correct= false;

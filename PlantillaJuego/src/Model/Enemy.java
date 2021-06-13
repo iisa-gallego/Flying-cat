@@ -8,7 +8,7 @@ public class Enemy implements Runnable, Drawable {
 	private PApplet app;
 
 	private PImage enemyLeft;
-	private PImage enemyRight;
+	//private PImage enemyRight;
 
 	private int posXEnemy;
 	private int posYEnemy;
@@ -27,8 +27,8 @@ public class Enemy implements Runnable, Drawable {
 		this.dir=dir;
 		moveXEnemy = false;
 
-		enemyLeft=app.loadImage("../Resources/enemyleft.png");
-		enemyRight=app.loadImage("../Resources/enemyright.png");
+		enemyLeft=app.loadImage("../Resources/Enemigo.png");
+		//enemyRight=app.loadImage("../Resources/enemyright.png");
 
 		int speedEnemy = 2;
 
@@ -143,9 +143,7 @@ public class Enemy implements Runnable, Drawable {
 			app.image(enemyLeft, posXEnemy, posYEnemy);
 		}
 
-		if (dir==-1) {
-			app.image(enemyRight, posXEnemy, posYEnemy);
+		//if (dir==-1) {
+			//app.image(enemyRight, posXEnemy, posYEnemy);
 		}
 	}
-
-}

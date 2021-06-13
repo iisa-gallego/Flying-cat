@@ -7,13 +7,13 @@ public class Menu {
 
 	private PImage menu;
 	private PApplet app;
-	//private int screen;
+	private int screen;
 	
 	public Menu(PApplet app) {
 		
 		this.app=app;
 		//screen=1;
-		menu=app.loadImage("data/menu.png");
+		menu=app.loadImage("../Resources/Inicio.png");
 	}
 	
 	public void drawScreen() {

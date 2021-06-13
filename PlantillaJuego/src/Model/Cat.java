@@ -28,7 +28,7 @@ public class Cat extends Thread implements Drawable{
 	public Cat(int x, int y,PApplet app) {
 
 		posX = x;
-		revy= app.loadImage("../Resources/revy1.png");
+		revy= app.loadImage("../Resources/Gatito.png");
 		position= new PVector(x,y);
 		vel= new PVector(0,0);
 		cc= new PVector(0,0);

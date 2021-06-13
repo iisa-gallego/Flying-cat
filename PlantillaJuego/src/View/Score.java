@@ -13,7 +13,7 @@ public class Score {
 	public Score(PApplet app) {
 		
 		this.app=app;
-		score = app.loadImage("../Resources/score.png");
+		score = app.loadImage("../Resources/Score.png");
 		scoreControl= new ControllerScore(app);
 	}
 	

@@ -25,9 +25,9 @@ public class Collectibles implements Runnable{
 		
 		moveXCollect= false;
 
-		yarn=app.loadImage("Estambre.png");
-		coin=app.loadImage("moneda.png");
-		lollipop=app.loadImage("bombon.png");
+		yarn=app.loadImage("../Resources/Estambre.png");
+		coin=app.loadImage("../Resources/moneda.png");
+		lollipop=app.loadImage("../Resources/bombon.png");
 	} //CONSTRUCTOR
 
 	public void draw () {
