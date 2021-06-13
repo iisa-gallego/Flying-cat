@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.LinkedList;
 
-//import exception.Lose;
+import Exception.Lose;
 import processing.core.PApplet;
 
 public class Logic {
@@ -309,22 +309,22 @@ public class Logic {
 	}
 
 
-	public void organizeByName()
+	public void organizebyName()
 	{
 		Collections.sort(player, byname);
 	}
 
-	public void organizeByScore()
+	public void organizebyScore()
 	{
 		Collections.sort(player);
 	}
 
-	public void organizeByDate()
+	public void organizebyDate()
 	{
 		Collections.sort(player, bydate);
 	}
 
-	public void organizeByTime()
+	public void organizebyTime()
 	{
 		Collections.sort(player, bytime);	
 	}
