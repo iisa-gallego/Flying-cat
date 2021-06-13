@@ -13,7 +13,7 @@ public class Menu {
 		
 		this.app=app;
 		//screen=1;
-		menu=app.loadImage("../Resources/menu.png");
+		menu=app.loadImage("data/menu.png");
 	}
 	
 	public void drawScreen() {
