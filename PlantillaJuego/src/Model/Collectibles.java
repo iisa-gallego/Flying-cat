@@ -8,58 +8,62 @@ public class Collectibles implements Runnable{
 	private PApplet app;
 
 	private PImage yarn;
+	private PImage coin;
+	private PImage lollipop;
 
-	private int posXYarn;
-	private int posYYarn;
-	private int moveX;
-	private boolean moveXYarn;
+	private int posXCollect;
+	private int posYCollect;
+	private boolean moveXCollect;
+	//private boolean moveYCollect;
 
-	public Collectibles(PApplet app , int posXYarn, int posYYarn) {
+	public Collectibles(PApplet app , int posXCollect, int posYCollect) {
 
 		this.app=app;
 
-		this.posXYarn=posXYarn;
-		this.posYYarn=posYYarn;
+		this.posXCollect = posXCollect;
+		this.posYCollect = posYCollect;
 		
-		moveXYarn= false;
+		moveXCollect= false;
 
-		yarn=app.loadImage("../data/yarn.png");
+		yarn=app.loadImage("Estambre.png");
+		coin=app.loadImage("moneda.png");
+		lollipop=app.loadImage("bombon.png");
 	} //CONSTRUCTOR
 
 	public void draw () {
 
-		app.image(yarn, posXYarn, posYYarn);	
+		app.image(yarn, posXCollect, posYCollect);	
 
 	}
 	
 	public void moveYarn() {
-		if (moveXYarn == true) {
-			posXYarn = posXYarn - 15;
+		if (moveXCollect == true) {
+			posXCollect = posXCollect - 15;
 		}	
 	}
 	
 	
 
-	public int getposXYarn () {
-		return posXYarn;
+	public int getposXCollect () {
+		return posXCollect;
 	}
-	public void setPosXYarn () {
-		this.posXYarn = posXYarn;
+	public void setPosXCollect () {
+		this.posXCollect = posXCollect;
 	}
-	public int getposYYarn () {
-		return posYYarn;
+	public int getposYCollect () {
+		return posYCollect;
 	}
 	
-	public void setPosYYarn () {
-		this.posYYarn = posYYarn;
+	public void setPosYCollect () {
+		this.posYCollect = posYCollect;
 	}
 
-	public boolean isMoveXStar() {
-		return moveXYarn;
+	public boolean isMoveXCollect() {
+		return moveXCollect;
 	}
 
 	public void setMoveXYarn(boolean moveXYarn) {
-		this.moveXYarn = moveXYarn;
+		this.moveXCollect = moveXYarn;
 	}
 
 	@Override

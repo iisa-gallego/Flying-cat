@@ -99,7 +99,7 @@ public class Logic {
 
 	public void newPoint() {
 		for (int i = 0; i < collectibles.size(); i++) {
-			if (app.dist(cat.getPosXCollision()+66, cat.getPosY()+70, collectibles.get(i).getposXYarn(), collectibles.get(i).getposYYarn())<=100) {
+			if (app.dist(cat.getPosXCollision()+66, cat.getPosY()+70, collectibles.get(i).getposXCollect(), collectibles.get(i).getposYCollect())<=100) {
 				collectibles.remove(i);
 				score = score + 100;
 			}
