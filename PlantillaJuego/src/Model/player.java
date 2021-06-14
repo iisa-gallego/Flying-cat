@@ -30,9 +30,9 @@ public class player implements Comparable<player> {
 		app.fill(0);
 		app.textSize(15);
 		app.text(name, x, y);
-		app.text(date2, x + 454, y);
-		app.text(time, x + 204, y);
-		app.text(score, x + 200 * 4, y);
+		app.text(date2, x + 45 * 4, y);
+		app.text(time, x + 120 * 4, y);
+		app.text(score, x + 180 * 4, y);
 
 	}
 
