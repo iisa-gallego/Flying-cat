@@ -71,7 +71,7 @@ public class Controller {
 		return logic.isLoseTouch();
   }
 	public void setCattyPosX(int posXCollision) {
-		logic.setPosXRevy(posXCollision);
+		logic.setPosXCatty(posXCollision);
 	}
 	
 	public void reset() {

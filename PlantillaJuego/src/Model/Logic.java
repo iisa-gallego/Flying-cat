@@ -148,7 +148,7 @@ public class Logic {
 
 	public void createCollectibles () {
 
-		collectibles.add(new Collectibles (app, 414,490));
+		collectibles.add(new Collectibles (app, 414,200));
 
 		collectibles.add(new Collectibles (app, 683,382));
 
@@ -158,9 +158,9 @@ public class Logic {
 
 		collectibles.add(new Collectibles (app, 2068,211));
 
-		collectibles.add(new Collectibles (app, 2094,493));
+		collectibles.add(new Collectibles (app, 2180,210));
 
-		collectibles.add(new Collectibles (app, 2343,490));
+		collectibles.add(new Collectibles (app, 2343,230));
 
 		collectibles.add(new Collectibles (app, 2833,326));
 
