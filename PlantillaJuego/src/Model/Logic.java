@@ -106,7 +106,7 @@ public class Logic {
 		}
 		app.fill(255);
 		app.textSize(40);
-		app.text("Score: "+ score, 700, 750);
+		app.text("Score: "+ score, 300, 50);
 	}
 
 	public void fallRevy(boolean c) {
@@ -191,7 +191,7 @@ public class Logic {
 		}
 		app.fill(255);
 		app.textSize(40);
-		app.text("Time: "+ min + ":" + seg, 400, 750);
+		app.text("Time: "+ min + ":" + seg, 100,50);
 	}
 
 	public void loseGame(){
