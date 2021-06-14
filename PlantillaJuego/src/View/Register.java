@@ -81,8 +81,8 @@ public class Register {
 	public int button() {
 		int screen=2;
 		
-		if(app.mouseX>526 && app.mouseX<661 && app.mouseY>212 && app.mouseY<246) {
-			
+			if(app.mouseX>544 && app.mouseX<634 && app.mouseY>444 && app.mouseY<519) {
+			// esq sup der:634 esq sup izq:544 esq inf izq:444 esq inf der:519
 			
 			try {
 				registerPlayer();

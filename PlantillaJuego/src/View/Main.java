@@ -20,7 +20,7 @@ public class Main extends PApplet{
 	private int screen;
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		
 		PApplet.main("View.Main");
 	}
@@ -42,8 +42,8 @@ public class Main extends PApplet{
 	
 	public void draw() {
 		
-		//System.out.println("X= "+ mouseX);
-		//System.out.println("Y= "+ mouseY);
+		System.out.println("X= "+ mouseX);
+		System.out.println("Y= "+ mouseY);
 		
 		
 		background(0);
