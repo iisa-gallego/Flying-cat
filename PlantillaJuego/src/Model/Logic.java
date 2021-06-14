@@ -81,8 +81,8 @@ public class Logic {
 	public void drawGame() {
 		cat.drawChar();
 		if (move == true) {
-			Thread revyMove = new Thread(cat);
-			revyMove.start();
+			Thread cattyMove = new Thread(cat);
+			cattyMove.start();
 		}
 
 		for (int i = 0; i < collectibles.size(); i++) {
@@ -109,7 +109,7 @@ public class Logic {
 		app.text("Score: "+ score, 300, 50);
 	}
 
-	public void fallRevy(boolean c) {
+	public void fallCatty(boolean c) {
 		cat.setFall(c);
 	}
 
@@ -328,7 +328,7 @@ public class Logic {
 	{
 		Collections.sort(player, bytime);	
 	}
-	public void setPosXRevy(int posXCollision) {
+	public void setPosXCatty(int posXCollision) {
 		cat.setPosXCollision(posXCollision);
 
 	}

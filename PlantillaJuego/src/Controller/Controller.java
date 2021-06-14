@@ -47,7 +47,7 @@ public class Controller {
 		return logic.getPosXEnemy();
 	}
 
-	public void drawStar () {
+	public void drawYarn () {
 		logic.drawYarn();
 	}
 
@@ -59,8 +59,8 @@ public class Controller {
 		return logic.getXCollision();
 	}
 	
-	public void fallRevy(boolean c) {
-		logic.fallRevy(c);
+	public void fallCatty(boolean c) {
+		logic.fallCatty(c);
 	}
 	
 	public int getScore() {
@@ -70,7 +70,7 @@ public class Controller {
 	public boolean isTouch() {
 		return logic.isLoseTouch();
   }
-	public void setRevyPosX(int posXCollision) {
+	public void setCattyPosX(int posXCollision) {
 		logic.setPosXRevy(posXCollision);
 	}
 	
