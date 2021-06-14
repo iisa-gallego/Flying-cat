@@ -79,13 +79,13 @@ public class Gameplay {
 
 		//System.out.println(701+posX+1112);
 
-		if (app.dist(controlGame.getXCol()+66, controlGame.getPosY()+ 140, 701+posX+1112, 600)<= 20) {
-			controlGame.fallRevy(false);
+		/*if (app.dist(controlGame.getXCol()+66, controlGame.getPosY()+ 140, 701+posX+1112, 600)<= 20) {
+			controlGame.fallRevy(false);//Ibamos a hacer una "caida" pero mejor no xd
 			
 		} else {
 			
 			controlGame.fallRevy(false);
-		}
+		}*/
 
 		if (controlGame.getPosY() + 140 == 640) {
 			controlGame.loseGame();
