@@ -124,13 +124,13 @@ public class Gameplay {
 		case 1:
 
 			app.image(win, 0, 0);
-			app.text(controlGame.getScore(), 900, 595);
+			app.text(controlGame.getScore(), 800, 490);
 			break;
 
 		case 2:
 
 			app.image(lose, 0, 0);
-			app.text(controlGame.getScore(), 900, 595);
+			app.text(controlGame.getScore(), 800, 490);
 			break;
 
 		default:
