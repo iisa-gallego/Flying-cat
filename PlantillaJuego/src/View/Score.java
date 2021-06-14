@@ -33,16 +33,16 @@ public class Score {
 			
 		}
 		
-		else if(app.mouseX>113 && app.mouseX<113+216 && app.mouseY>252 && app.mouseY<252+75) {
+		else if(app.mouseX>165 && app.mouseX<232 && app.mouseY>215 && app.mouseY<228) {
 			scoreControl.sortNames();
 			
-		} else if(app.mouseX>361 && app.mouseX<361+216 && app.mouseY>252 && app.mouseY<252+75) {
+		} else if(app.mouseX>398 && app.mouseX<447 && app.mouseY>215 && app.mouseY<228) {
 			scoreControl.sortDate(); 
 			
-		} else if(app.mouseX>609 && app.mouseX<609+216 && app.mouseY>252 && app.mouseY<252+75) {
+		} else if(app.mouseX>672 && app.mouseX<722 && app.mouseY>215 && app.mouseY<228) {
 			scoreControl.sortTime();
 			
-		} else if(app.mouseX>857 && app.mouseX<857+216 && app.mouseY>252 && app.mouseY<252+75) {
+		} else if(app.mouseX>968 && app.mouseX<1035 && app.mouseY>215 && app.mouseY<228) {
 			scoreControl.sortScore();
 		}
 		
