@@ -8,7 +8,7 @@ import processing.core.PVector;
 public class Cat extends Thread implements Drawable{
 
 	private PApplet app;
-	private PImage revy;
+	private PImage katty;
 
 	private int floor;
 	private int height;
@@ -28,7 +28,7 @@ public class Cat extends Thread implements Drawable{
 	public Cat(int x, int y,PApplet app) {
 
 		posX = x;
-		revy= app.loadImage("../Resources/Gatito.png");
+		katty= app.loadImage("../Resources/Gatito.png");
 		position= new PVector(x,y);
 		vel= new PVector(0,0);
 		cc= new PVector(0,0);
@@ -140,12 +140,12 @@ public class Cat extends Thread implements Drawable{
 		this.app = app;
 	}
 
-	public PImage getRevy() {
-		return revy;
+	public PImage getKatty() {
+		return katty;
 	}
 
-	public void setRevy(PImage revy) {
-		this.revy = revy;
+	public void setKatty(PImage katty) {
+		this.katty = katty;
 	}
 
 	public int getFloor() {
@@ -220,7 +220,7 @@ public class Cat extends Thread implements Drawable{
 			vel.x*=-1;
 		}
 
-		app.image(revy, position.x, position.y);
+		app.image(katty, position.x, position.y);
 		position.add(vel);
 		vel.add(cc);
 
